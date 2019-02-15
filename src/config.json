@@ -1,5 +1,8 @@
 {
-    "BaseUrl":"http://local.bdsvue",
-    "UrlImage":"http://local.bdsvue/storage/",
-    "UrlRestApi":"http://local.bdsvue/api"
+    "BaseUrl": "localhost:8080/",
+    "BaseUrlApi":"http://vietcore.mientay.top/",
+    "UrlImageBlog": "http://vietcore.mientay.top/public/upload/images/thumb_baiviet/",
+    "UrlImageProduct": "http://vietcore.mientay.top/public/upload/images/thumb_hinhsanpham/",
+    "UrlRestApi":"http://vietcore.mientay.top/api",
+    "WebsiteName":"Cty Cổ Phần Giải Pháp Công Nghệ Vietcore"
 }

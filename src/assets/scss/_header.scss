@@ -59,17 +59,9 @@ div.header-first{
                     -webkit-transition: 0.3s;
                     transition: 0.3s;
                     @include li(transparent);
-                    &.active{
+                    .router-link-exact-active{
                         background-color: #fff !important;
-                        a{
-                            color: $main;
-                        }
-                        &:hover{
-                            background-color: $main;
-                            a{
-                                color: #fff;
-                            }
-                        }
+                        color: $main;
                     }
                     .dropdown-menu {
                         display: block;

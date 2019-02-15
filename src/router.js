@@ -5,23 +5,53 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: function () { 
-        return import(/* webpackChunkName: "about" */ './views/About.vue')
-      }
-    }
-  ]
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/about',
+            name: 'about',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: function () {
+                return import(/* webpackChunkName: "about" */ './views/About.vue')
+            }
+        },
+        {
+            path: '/contact',
+            name: 'contact',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: function () {
+                return import(/* webpackChunkName: "about" */ './views/Contact/Contact.vue')
+            }
+        },
+        {
+            path: '/blog/:slug-b:id',
+            name: 'blogDetail',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: function () {
+                return import(/* webpackChunkName: "about" */ './views/Blog/BlogDetail.vue')
+            }
+        },
+        {
+            path: '/blog-category/:slug-d:id',
+            name: 'blogCategory',
+            // route level code-splitting
+            // this generates a separate chunk (about.[hash].js) for this route
+            // which is lazy-loaded when the route is visited.
+            component: function () {
+                return import(/* webpackChunkName: "about" */ './views/Blog/BlogCategory.vue')
+            }
+        }
+    ]
 })

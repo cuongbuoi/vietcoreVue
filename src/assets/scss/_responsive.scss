@@ -133,7 +133,6 @@
     }
     .banner-section{
         height: 100%;
-        margin-top: 40px;
         .banner-inner{
             padding: 0 30px;
             h1{
@@ -145,9 +144,6 @@
                 font-weight: 100;
             }
         }
-    }
-    .page-main{
-        margin-top: 45px;
     }
 }
 @media #{$breakpoint-xs-mini}{
