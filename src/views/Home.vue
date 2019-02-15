@@ -58,7 +58,7 @@
                             <div class="counter-item">
                                 <div class="counter-icon"><i class="fe fe-folder"></i></div>
                                 <div class="counter">
-                                    <count-to :startVal='0' :endVal='1200' :duration=2000></count-to>
+                                    <count-to ref="count1" :autoplay="false" :startVal='0' :endVal='1200' :duration=2000></count-to>
                                 </div>
                                 <p>Dự án</p>
                             </div>
@@ -67,7 +67,7 @@
                             <div class="counter-item">
                                 <div class="counter-icon"><i class="fe fe-user"></i></div>
                                 <div class="counter">
-                                    <count-to :startVal='0' :endVal='500' :duration=2000></count-to>
+                                    <count-to ref="count2" :autoplay="false" :startVal='0' :endVal='500' :duration=2000></count-to>
                                 </div>
                                 <p>Khách hàng</p>
                             </div>
@@ -76,7 +76,7 @@
                             <div class="counter-item">
                                 <div class="counter-icon"><i class="fe fe-award"></i></div>
                                 <div class="counter">
-                                    <count-to :startVal='3' :endVal='10' :duration=1000></count-to>
+                                    <count-to ref="count3" :autoplay="false" :startVal='3' :endVal='10' :duration=1000></count-to>
                                 </div>
                                 <p>Năm kinh nghiệm</p>
                             </div>
@@ -203,7 +203,8 @@
                 service: [],
                 title:'',
                 description:'',
-                image:''
+                image:'',
+                firstTime: true
             }
         },
         components: { carousel,countTo },
@@ -212,6 +213,7 @@
         },
         mounted(){
             this.initParticles();
+            this.startCountTo();
         },
         methods:{
             getService(){
@@ -221,6 +223,18 @@
                     this.title = response.data.meta.title,
                     this.description = response.data.meta.mieuta,
                     this.image = response.data.meta.image
+                });
+            },
+            startCountTo(){
+                let vm = this;
+                let countArea = $(".counter-section").offset().top-400;
+                $(window).scroll(function () {
+                    if($(window).scrollTop() >= countArea && vm.firstTime){
+                        vm.$refs.count1.start();
+                        vm.$refs.count2.start();
+                        vm.$refs.count3.start();
+                        vm.firstTime = false;
+                    }
                 });
             },
             initParticles(){

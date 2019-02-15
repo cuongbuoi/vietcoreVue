@@ -2,9 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import vueHeadful from 'vue-headful';
+import vueHeadful from 'vue-headful'
 import Paginate from 'vuejs-paginate'
-
+import JQuery from 'jquery'
+let $ = JQuery;
+window.$ = require('jquery')
+window.JQuery = require('jquery')
 Vue.config.productionTip = false;
 import Axios from './Axios';
 
