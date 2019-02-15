@@ -1,0 +1,230 @@
+div.header-first{
+    background-color: rgba(255,255,255,0.7);
+    border-bottom:none;
+    padding: 0;
+    .header-brand{
+        .header-brand-img{
+            height: 3rem;
+        }
+    }
+}
+.header-toggler{
+    color: #fff;
+    height: 3rem;
+    border:none;
+    background: transparent;
+    &:hover{
+        color: #fff;
+    }
+}
+#btn-close-menu{
+    border:none;
+    background: transparent;
+    color: #111;
+    background: #ddd;
+}
+.input-icon-addon{
+    left: unset;
+    right: 0;
+}
+.header-brand-img{
+    height: 3rem;
+}
+.header-second{
+    border-bottom: none;
+    background-color: $main;
+    #mainMenu{
+        background-color: transparent;
+        padding: 0;
+        > .container {
+            padding: 0 !important;
+        }
+        nav{
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                li{
+                    border: 0;
+                    -webkit-transition: all .3s ease;
+                    transition: all .3s ease;
+                    position: relative;
+                    margin-left: 0;
+                    -webkit-transition: 0.3s;
+                    transition: 0.3s;
+                    @include li(transparent);
+                    &.active{
+                        background-color: #fff !important;
+                        a{
+                            color: $main;
+                        }
+                        &:hover{
+                            background-color: $main;
+                            a{
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .dropdown-menu {
+                        display: block;
+                        -webkit-transition: all 0.3s ease;
+                        transition: all 0.3s ease;
+                        min-width: 230px;
+                        -webkit-transform: scale(0);
+                        transform: scale(0);
+                        top: 45px;
+                        border: none;
+                        background-color:#fff;
+                        left: auto;
+                        margin: 0;
+                        border-radius: 0;
+                        @include box-shadow(0px 0px 18px 0 rgba(0, 0, 0, 0.05));
+                        > li {
+                            background-color: #fff;
+                            padding: 0;
+                            > a,
+                            > span,
+                            [class*="col-"] > ul > li > a {
+                                font-size: 13px;
+                                line-height: 14px;
+                                font-weight: 400;
+                                font-style: normal;
+                                color: $main !important;
+                                padding: 12px 20px 12px 18px;
+                                display: block;
+                                -webkit-transition: .3s ease;
+                                transition: .3s ease;
+                                border-radius: 0;
+                                &:focus,
+                                &:hover,
+                                &:active,
+                                &.hover-active {
+                                    background-color: $main;
+                                    color: #fff !important;
+                                    cursor: pointer;
+                                }
+                                a {
+                                    color: $main !important;
+                                    text-decoration: none !important;
+                                }
+                                > i {
+                                    margin-left: -4px;
+                                    margin-right: 6px;
+                                    min-width: 14px;
+                                }
+                            }
+                            &.current,
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                > a,
+                                > span {
+                                    color: #fff !important;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .dropdown-submenu {
+                        position: relative;
+                        &:before {
+                            line-height: 40px;
+                            content: "\f105";
+                            font-family: fontawesome;
+                            font-size: 12px;
+                            opacity: 0.6;
+                            position: absolute;
+                            right: 18px;
+                            color: #fff;
+                            -webkit-transition: .3s ease;
+                            transition: .3s ease;
+                        }
+                        > .dropdown-menu {
+                            margin-left: -6px;
+                            left: 100%;
+                            top: -1px;
+                            &.menu-invert {
+                                right: 100%;
+                                left: auto;
+                            }
+                        }
+                        &:hover {
+                            &:before {
+                                right: 14px;
+                            }
+                            > ul {
+                                min-width: 230px;
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                    &:hover > ul {
+                        min-width: 230px;
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    > a {
+                        display: block;
+                        position: relative;
+                        padding: 11px 14px;
+                        font-size: 13px;
+                        font-weight: 700;
+                        white-space: nowrap;
+                        letter-spacing: 1px;
+                        border-radius: 5px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        -webkit-transition: all .3s ease;
+                        transition: all .3s ease;
+                        line-height: normal;
+                        > i {
+                            margin-left: 2px;
+                            min-width: 14px;
+                            font-size: 14px;
+                        }
+                        &:after,
+                        &:before {
+                            -webkit-transition: all .3s ease;
+                            transition: all .3s ease;
+                        }
+                    }
+                    &.hover-active,
+                    &.current,
+                    &:hover,
+                    &:focus {
+                        > a,
+                        > span {
+                            text-decoration: none;
+                        }
+                        > a {
+                            background-color: #fff;
+                            color: $main;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: none;
+    z-index: 1500;
+    padding: 0 !important;
+    -webkit-transition: top 0.3s ease;
+    transition: top 0.3s ease;
+    @include box-shadow(0px 0px 18px 0 rgba(0, 0, 0, 0.05));
+}

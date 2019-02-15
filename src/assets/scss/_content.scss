@@ -1,0 +1,175 @@
+.banner-section{
+    position: relative;
+    background: $main;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    .banner-inner{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        color: #fff;
+        text-align: center;
+        h1{
+            font-size: 50px;
+            margin-bottom: .75rem;
+        }
+    }
+}
+.header-title{
+    text-align: center;
+    color: $main;
+    margin-bottom: 2.75rem;
+    position: relative;
+    z-index: 1;
+    h2{
+        font-size: 40px;
+    }
+}
+.service-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2.75rem;
+    .service-image{
+        width: 25%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .service-info{
+        width: 75%;
+        padding-left: .5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        a{
+            color: $main;
+            font-weight: bold;
+            text-decoration: none;
+            @include transition(.3s ease);
+            &:hover{
+                color: lighten($main,10);
+            }
+        }
+    }
+}
+.blog-detail-title{
+    border-bottom: 2px solid $main;
+    padding-bottom: .75rem;
+    margin-bottom: 1.75rem;
+}
+.customer{
+    .comment{
+        .info-top{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 15px;
+            .img{
+                width: 80px;
+                height: 80px;
+                border: 5px solid #ddd;
+                border-radius: 100%;
+                overflow: hidden;
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-clip: content-box;
+                margin-right: 10px;
+            }
+            .name{
+                color: #fff;
+                padding-top: 6px;
+                h4{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .content-bot{
+            background: rgba(0,0,0,0.7);
+            border-radius: 3px;
+            padding: 50px 25px 40px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            height: 200px;
+            line-height: 22px;
+            position: relative;
+            color: #fff;
+            font-weight: bold;
+            &:before{
+                content: '';
+                position: absolute;
+                left: 95px;
+                top: -26px;
+                border: 13px solid transparent;
+                border-bottom-color: rgba(0,0,0,0.7);
+            }
+        }
+    }
+}
+.counter-section{
+    position: relative;
+    background: url("../img/bg_footer.jpg") no-repeat fixed;
+    background-size: cover;
+    background-position: center top;
+    padding: 60px 0;
+    &:before{
+        z-index: 0;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+    }
+    .counter-item{
+        text-align: center;
+        .counter-icon{
+            font-size: 50px;
+            color: #fff;
+        }
+        .counter{
+            span{
+                font-size: 50px;
+                color: #fff;
+                @media #{$breakpoint-xs} {
+                    font-size: 30px;
+                }
+            }
+        }
+        p{
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+}

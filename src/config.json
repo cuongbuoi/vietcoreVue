@@ -1,0 +1,5 @@
+{
+    "BaseUrl":"http://local.bdsvue",
+    "UrlImage":"http://local.bdsvue/storage/",
+    "UrlRestApi":"http://local.bdsvue/api"
+}

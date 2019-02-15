@@ -1,0 +1,23 @@
+$main: #0f7adf;
+$dark: #010000;
+$price: #c70000;
+$scrollbar: $main;
+$font-main: 'Quicksand', sans-serif;
+
+$red: #c70000;
+
+$breakpoint-xl: 'only screen and (min-width:1200px)';
+
+$breakpoint-lg: 'only screen and (min-width:992px) and (max-width:1199px)';
+
+$breakpoint-md: 'only screen and (min-width:768px) and (max-width:991px)';
+
+$breakpoint-sm: 'only screen and (min-width:576px) and (max-width:767px)';
+
+$breakpoint-xs: 'only screen and (max-width:768px)';
+
+$breakpoint-xs-landscape: 'only screen and (min-width:480px) and (max-width:767px)';
+
+$breakpoint-xs-mini: 'only screen and (max-width:480px)';
+
+$breakpoint-4inch: 'only screen and (max-width:325px)';
